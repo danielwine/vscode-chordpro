@@ -15,12 +15,13 @@ This extension provides ChordPro files support for VS Code.
 - [ ] Full syntax snippets
 - [ ] Rendering preview window
 - [ ] Export to PDF songbook
+- [x] Export to OpenSong Backup (OSB)
 
 ![Animation](images/extension.gif)
 
 ## Requirements
 
-None in this version.
+jszip
 
 ## Extension Settings
 
@@ -32,9 +33,10 @@ None.
 
 ## Release Notes
 
-This is the first release of VS Code ChordPro extension.  
+This is a slightly modified release of the original VS Code ChordPro extension.
 With it comes syntax highlighting support for one of the best song lyrics and
 chords format.
+
 
 Future releases will have, at some point in time, improvements in the
 highlighting (add coloring by groups), and what's listed on the check list, in

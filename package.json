@@ -2,22 +2,17 @@
   "name": "chordpro",
   "displayName": "ChordPro",
   "publisher": "ricardomfmsousa",
-  "description": "Provides ChordPro support for Visual Studio Code",
+  "description": "Provides ChordPro support (with OpenSong export) for Visual Studio Code",
   "author": {
     "name": "Ricardo Marques de Sousa"
   },
-  "version": "0.2.0",
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js",
-    "release:major": "scripts/./release.sh major",
-    "release:minor": "scripts/./release.sh minor",
-    "release:patch": "scripts/./release.sh patch"
-  },
+  "contributors": [
+    {
+      "name": "Daniel Vinkovics",
+      "url": "https://danielwine.github.io/"
+    }
+  ],
+  "version": "0.3.0",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -29,6 +24,11 @@
     "Snippets",
     "Formatters"
   ],
+  "activationEvents": [
+    "onLanguage:chordpro",
+    "onCommand:chordpro.exportToOSB"
+  ],
+  "main": "./out/extension.js",
   "private": false,
   "repository": {
     "type": "git",
@@ -74,7 +74,24 @@
         "language": "chordpro",
         "path": "./snippets/chordpro.json"
       }
+    ],
+    "commands": [
+      {
+        "command": "chordpro.exportToOSB",
+        "title": "Export current chordPro batch file to OSB (OpenSong Backup)"
+      }
     ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "release:major": "scripts/./release.sh major",
+    "release:minor": "scripts/./release.sh minor",
+    "release:patch": "scripts/./release.sh patch"
   },
   "devDependencies": {
     "@types/vscode": "^1.74.0",
@@ -88,5 +105,8 @@
     "mocha": "^10.1.0",
     "typescript": "^4.9.3",
     "@vscode/test-electron": "^2.2.0"
+  },
+  "dependencies": {
+    "jszip": "^3.8.0"
   }
 }
