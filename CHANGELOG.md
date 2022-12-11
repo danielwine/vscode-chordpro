@@ -6,11 +6,13 @@
 >
 > Versioning scheme in use is [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [Unreleased] - 2022-12-11
 
 ### Added
 
-- _to be defined_
+- TypeScript
+- Batch file handling
+- OpenSong Backup (OSB) export
 
 ## [0.2.0] - 2018-04-10
 

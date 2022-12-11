@@ -36,7 +36,7 @@ None.
 This is a slightly modified release of the original VS Code ChordPro extension.
 With it comes syntax highlighting support for one of the best song lyrics and
 chords format.
-
+Now supports exporting batch chordpro files to OpenSong backup (OSB) format. You can navigate between songs separated by the {new_song} directive by pressing Ctrl-Shift-O.
 
 Future releases will have, at some point in time, improvements in the
 highlighting (add coloring by groups), and what's listed on the check list, in
@@ -48,16 +48,16 @@ To check the latest changes, read the [CHANGELOG.md](CHANGELOG.md).
 
 All contributions are more than welcome! If you want to get started with a PR,
 please do the following:  
-_(3rd, 4th and 5th steps are not required yet)_
+_(5th step is not required yet)_
 
 1. Check out the
    [VS Code Extension Docs](https://code.visualstudio.com/docs/extensions/overview),
    especially
    [Running and Debugging Extensions](https://code.visualstudio.com/docs/extensions/debugging-extensions).
 1. Fork this repo.
-1. ~~Install dependencies with `npm install`. You'll also need to install
+1. Install dependencies with `npm install`. ~~You'll also need to install
    dependencies in the `client` and `server` directories.~~
-1. ~~Run `npm run watch` in a shell to get the Typescript compiler running.~~
+1. Run `npm run watch` in a shell to get the Typescript compiler running.
 1. ~~Run `npm run watch:client` to compile the client and `npm run watch:server`
    to compile the server. You'll need all three running to do development on the
    extension.~~
